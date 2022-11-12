@@ -34,19 +34,19 @@ public class StudentTest {
 			System.out.println("Press 3 for sort by marks");
 
 			i = scanner.nextInt();
-			if (i < 1 || i > 3) {
+			
 				try {
+					if (i < 1 || i > 3) 
 					throw new InvaliduserInput("Invalid user input");
 
 				}
 				// throw new InvaliduserInput("error");
-				catch (Exception e) {
+				catch (InvaliduserInput e) {
 
-					// TODO Auto-generated catch block
-					e.getMessage();
-					e.printStackTrace();
+					System.out.println(e.getMessage());
+					
 				}
-			}
+			
 			/*
 			 * System.out.println("Unsorted");
 			 * 
@@ -84,37 +84,36 @@ public class StudentTest {
 
 				}
 			}
+			int i2;
+			do {
 
-			System.out.println("To continue press 1 \n For exist press 0");
-			int i2 = scanner.nextInt();
-			if (i2 > 1) {
+				System.out.println("To continue press 1 \n For exist press 0");
+				i2 = scanner.nextInt();
+
 				try {
-					throw new InvaliduserInput("Incorrect value.Please restart the application");
+					if (i2 > 1)
+						throw new InvaliduserInput("Incorrect user input. Please enter valid number");
 
 				}
 				// throw new InvaliduserInput("error");
-				catch (Exception e) {
+				catch (InvaliduserInput e) {
 
-					// TODO Auto-generated catch block 
-
-					e.printStackTrace();
+					// TODO Auto-generated catch block
+					System.out.println(e.getMessage());
 				}
-			
-		break;	}
-			
+			} while (i2 > 1);
+
 			if (i2 == 0) {
 				i = 0;
 				System.out.println();
 				System.out.println("Thank You For Visit");
-				
-				
-				 
-				  break;} 
-				  else { i = 1; 
-				  }
-		
-			  
-			 
-		}}
-	}
+
+			break;
+			} else {
+				i = 1;
+			}
+
+		}
+	
+}}
 
