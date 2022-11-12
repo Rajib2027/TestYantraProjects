@@ -42,8 +42,10 @@ public class StudentTest {
 				}
 				// throw new InvaliduserInput("error");
 				catch (InvaliduserInput e) {
-
-					System.out.println(e.getMessage());
+					
+					   System.out.println(e.getStackTrace());
+					   System.out.println(e.toString());
+					//System.out.println(e.getMessage());
 					
 				}
 			
@@ -97,9 +99,12 @@ public class StudentTest {
 				}
 				// throw new InvaliduserInput("error");
 				catch (InvaliduserInput e) {
-
+					
+                        System.out.println(e.getStackTrace());
+                        System.out.println(e.toString());
 					// TODO Auto-generated catch block
-					System.out.println(e.getMessage());
+					//System.out.println(e.getMessage());
+					
 				}
 			} while (i2 > 1);
 
